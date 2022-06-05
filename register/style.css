@@ -1,0 +1,206 @@
+
+h1{
+    text-align: center;
+    font-size: 60px;
+}
+input{
+    display: block;
+    margin: auto;
+    text-align: center;
+    outline: none;
+    border: 1px solid red;
+    width: 300px;
+    height: 40px;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+input[type = "text"]#value{
+    position: relative;
+}
+input[type = "password"]{
+
+}
+input[type = "email"]{
+}
+input[type = "submit"]{
+    width: 200px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #ff0032;
+    color: white;
+}
+h1#captcha{
+    background-image: url(../assets/bg-captcha.png);
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    font-size: 60px;
+    border-radius: 100px;
+    width: 150px;
+    text-decoration: line-through;
+    margin: auto;
+    margin-top: 40px;
+}
+h1#captcha::selection{
+    background-color: rgba(0, 0, 0, 0);
+}
+body{
+    outline: hidden;
+}
+*{
+    margin: 0;
+}
+header{
+    display: flex;
+    margin: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-menu{
+    margin-left: -59px;
+}
+header .logo-header img{
+    width: 80px;
+}
+header .main-menu ul{
+    display: flex;
+    list-style-type: none;
+}
+header .main-menu ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    margin: 17px;
+    font-family: 'Volte-Semibold',Arial,sans-serif;
+    color: #686e7f;
+    cursor: pointer;
+    transition: .5s;
+}
+header .main-menu ul li a:hover{
+    color: #ff0032;
+}
+
+/** hamburger menu **/
+
+div.hamburger{
+    display: block;
+    margin-right: 30px;
+}
+.menu{
+    display: block;
+    width: 45px;
+    height: 40px;
+    margin: 20px auto;
+    position: relative;
+    cursor: pointer;
+    z-index: 99999;
+}
+#nav{
+    display: none;
+}
+.menu>div{
+    display: block;
+    width: 100%;
+    height:2px;
+    background: #686e7f;
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition:all 0.5s;
+}
+.menu>div:after,.menu>div:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #686e7f;
+    border-radius: 2px;
+    transition: .4s;
+}
+
+.menu>div:after{
+    transform: translateY(10px);
+    transform-origin: bottom left;
+    
+ }        
+.menu>div:before{
+    transform: translateY(-10px);
+    transform-origin: top left;
+
+ }
+
+#nav:checked ~ .menu>div{
+    background: transparent;
+    transform: translateX(-40px);
+}
+        
+#nav:checked ~ .menu>div:before{
+    transform: translate(40px ,-15px) rotate(45deg);
+ }
+        
+#nav:checked ~ .menu>div:after{
+    transform: translate(40px ,15px) rotate(-45deg);
+}
+/*--------*/
+
+.container{
+    max-width: 150rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 4rem;
+    padding-left: 4rem;
+}
+.sidebar{
+    width: 0;
+    height: 100vh;
+    background-color: #222;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 999;
+  }
+.sidebar a{
+    text-decoration: none;
+    display: flex;
+    margin: 30px;
+    font-size: 40px;
+    padding-left: 40px ;
+    font-family: 'Volte-Semibold',sans-serif;
+    text-decoration: none;
+    color: #888ea0;
+    text-align: left;
+    transition: .5s;
+  }
+  .sidebar a:hover{
+      color: #ff0032;
+  }
+.show{
+    width: 780px;
+  }
+.sidebar .email-sidebar a{
+    font-size: 18px;
+}
+svg text{
+    stroke: red;
+    stroke-width: 1px;
+    fill: transparent;
+    animation: fade 3s infinite alternate;
+    font-size: 30px;
+    max-width: 2100px;
+}
+@keyframes fade {
+    from{stroke-dasharray: 0 70%;}
+    to{stroke-dasharray: 50% 0;
+    stroke-dashoffset: 10%;}
+}
+
+p{
+    display: block;
+    text-align: center;
+    color: #ff0032;
+    font-size: 20px;
+}

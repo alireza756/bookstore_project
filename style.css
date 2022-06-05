@@ -1,0 +1,430 @@
+body{
+    outline: hidden;
+    scroll-behavior: smooth;
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+}
+header{
+    display: flex;
+    margin: 30px;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 999999999999999;
+    background: rgb(255, 255, 255);
+    /* backdrop-filter: blur( 8.5px ); */
+}
+.main-menu{
+    margin-left: -59px;
+
+}
+header .logo-header img{
+    width: 80px;
+}
+header .main-menu ul{
+    display: flex;
+    list-style-type: none;
+}
+header .main-menu ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    margin: 17px;
+    font-family: 'Volte-Semibold',Arial,sans-serif;
+    color: rgb(47, 47, 47);
+    cursor: pointer;
+    transition: .5s;
+}
+header .main-menu ul li a:hover{
+    color: #ff0032;
+}
+
+/** hamburger menu **/
+
+div.hamburger{
+    display: block;
+    margin-right: 30px;
+}
+.menu{
+    display: block;
+    width: 45px;
+    height: 40px;
+    margin: 20px auto;
+    position: relative;
+    cursor: pointer;
+    z-index: 99999;
+}
+#nav{
+    display: none;
+}
+.menu>div{
+    display: block;
+    width: 100%;
+    height:2px;
+    background: #686e7f;
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition:all 0.5s;
+}
+.menu>div:after,.menu>div:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #686e7f;
+    border-radius: 2px;
+    transition: .4s;
+}
+
+.menu>div:after{
+    transform: translateY(10px);
+    transform-origin: bottom left;
+    
+ }        
+.menu>div:before{
+    transform: translateY(-10px);
+    transform-origin: top left;
+
+ }
+
+#nav:checked ~ .menu>div{
+    background: transparent;
+    transform: translateX(-40px);
+}
+        
+#nav:checked ~ .menu>div:before{
+    transform: translate(40px ,-15px) rotate(45deg);
+ }
+        
+#nav:checked ~ .menu>div:after{
+    transform: translate(40px ,15px) rotate(-45deg);
+}
+/*--------*/
+
+header.container{
+    max-width: 150rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 4rem;
+    padding-left: 4rem;
+}
+.sidebar{
+    width: 0;
+    height: 100vh;
+    background-color: #222;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 999;
+  }
+.sidebar a{
+    text-decoration: none;
+    display: flex;
+    margin: 30px;
+    font-size: 40px;
+    padding-left: 40px ;
+    font-family: 'Volte-Semibold',sans-serif;
+    text-decoration: none;
+    color: #888ea0;
+    text-align: left;
+    transition: .5s;
+  }
+  .sidebar a:hover{
+      color: #ff0032;
+  }
+.show{
+    width: 780px;
+  }
+.sidebar .email-sidebar a{
+    font-size: 18px;
+}
+svg text{
+    stroke: red;
+    stroke-width: 1px;
+    fill: transparent;
+    animation: fade 3s infinite alternate;
+    font-size: 30px;
+    max-width: 2100px;
+}
+@keyframes fade {
+    from{stroke-dasharray: 0 70%;}
+    to{stroke-dasharray: 50% 0;
+    stroke-dashoffset: 10%;}
+}
+.header_bottom{
+    background-image: url(assets/Coffee-cup-notebook-book-sunglasses-pen-still-life_3840x2160.jpg);
+    width: 100%;
+    height: 794px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+
+body { 
+  font-family: 'Open Sans', 'sans-serif';
+
+}
+
+.item-1, 
+.item-2, 
+.item-3 {
+    color: #ffffff;
+	position: absolute;
+    display: flex;
+	top: 1em;
+    width: 60%;
+    font-size: 5em;
+	animation-duration: 20s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item-1{
+	animation-name: anim-1;
+}
+
+.item-2{
+	animation-name: anim-2;
+}
+
+.item-3{
+	animation-name: anim-3;
+}
+
+@keyframes anim-1 {
+	0%, 8.3% { left: -100%; opacity: 0; }
+  8.3%,25% { left: 25%; opacity: 1; }
+  33.33%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-2 {
+	0%, 33.33% { left: -100%; opacity: 0; }
+  41.63%, 58.29% { left: 25%; opacity: 1; }
+  66.66%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-3 {
+	0%, 66.66% { left: -100%; opacity: 0; }
+  74.96%, 91.62% { left: 25%; opacity: 1; }
+  100% { left: 110%; opacity: 0; }
+}
+
+.box1 , .box2 , .box3{
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 17px );
+    -webkit-backdrop-filter: blur( 17px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 300px;
+    height: 300px;
+    flex-wrap: wrap;
+}
+.box{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 450px;
+
+}
+.box1 img ,.box2 img{
+    width: 100px;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+}
+.box1 h1 ,.box2 h1{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.box3 img{
+    width: 100px;
+    display: block;
+    margin: auto;
+    margin-top: 70px;
+}
+
+.box3 h1{
+    text-align: center;
+    margin-top: 90px;
+}
+
+/*products*/
+.products{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+.product1 , .product2 , .product3{
+    width: 300px;
+    height: 400px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 30px;
+    margin-top: 50px;
+}
+.product1 img , .product2 img , .product3 img{
+    width: 200px;
+    margin: auto;
+    display: block;
+    margin-top: 30px;
+}
+
+.product1 p , .product2 p , .product3 p{
+    font-size: 20px;
+    text-align: right;
+    margin-top: 10px;
+    padding: 0 20px 0 20px;
+}
+
+.products input{
+    width: 250px;
+    background-color: lightgray;
+    border: none;
+    height: 50px;
+    border-radius: 30px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    transition: .6s;
+    cursor: pointer;
+}
+
+.products input:hover{
+    background-color: #ff0032;
+    color: white;
+}
+
+   /* ------footer------*/
+   .footer-box{
+    width: 100%;
+    margin-top: 30px;
+    height: 400px;
+    background-color: black;
+}
+.footer-contact{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+.footer-contact .footer-about-us h5{
+    color: white;
+    font-size: 30px;
+    border-bottom: 2px solid #ff0032;
+}
+.footer-about-us{
+    margin-top: 0;
+    max-width: 250px;
+    overflow-wrap: break-word;
+    text-align: right;
+}
+.footer-about-us p{
+    color: white;
+    text-align: right;
+    font-size: 21px;
+}
+.footer-contact-with-us h5{
+    color: white;
+    font-size: 30px;
+    border-bottom: 2px solid #ff0032;
+}
+.footer-social h5{
+    color: white;
+    font-size: 30px;
+    border-bottom: 2px solid #ff0032;
+}
+footer.container{
+    max-width: 110rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 10rem;
+    padding-left: 10rem;
+}
+.footer-contact-with-us{
+    max-width: 250px;
+    overflow-wrap: break-word;
+    text-align: right;
+}
+.footer-social{
+    max-width: 250px;
+    overflow-wrap: break-word;
+    text-align: right;
+}
+.footer-contact-with-us p{
+    color: white;
+    text-align: right;
+    font-size: 21px;
+}
+.footer-social i{
+    cursor: pointer;
+    color: white;
+    font-size: 40px;
+    margin: 20px;
+    transition: .3s;
+}
+.footer-social i:hover{
+    color: #ff0032;
+}
+
+.top button{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background-color: #ff0032;
+    text-align: center;
+    border-radius: 50%;
+    border: 10px solid white;
+    cursor: pointer;
+    transition: .5s;
+    left: 47.5%;
+}
+.top a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+.top button:hover{
+    background-color: black;
+    color: white;
+}
+.top i{
+    font-size: 30px;
+}
+.online-support{
+    width: 20px;
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    cursor: pointer;
+}
+.online-support img{
+    width: 80px;
+}
+.title-h1{
+    text-align: center;
+    color: #686e7f;
+    margin-top: 50px;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a .log-button{
+    border: 2px solid #ff0032;
+    color: red;
+}
